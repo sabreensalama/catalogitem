@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Edit Category:</h1>
+<form method='post' action="{{url_for('editCatalog',catalog_name=i.name)}}">
+ <p>Name:</p>
+<input type='text' name='name' placeholder='{{i.name}}'>
+
+<input type="submit" value="submit">
+</form>
+{% endblock %}

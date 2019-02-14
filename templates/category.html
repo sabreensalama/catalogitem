@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<a href="{{url_for('newCategory',catalog_name=catalog_name)}}">Add Category</a>
+<a href="{{url_for('showLogin')}}"><button class='log'>Login</button></a>
+<h1>Categories</h1>
+
+
+{% with messages=get_flashed_messages()%}
+{% for i in messages %}
+<strong>{{i}}</strong>
+{%endfor%}
+{%endwith%}
+
+{% for i in catalog %}
+
+<a href="{{url_for('showItems',catalog_name=i.name)}}" ><span>{{i.name}}<span></a>
+<a href="{{url_for('editCatalog',catalog_name=i.name)}}">Edit</a>
+<a href="{{url_for('deleteCatalog',catalog_name=i.name)}}">Delete</a>
+<a href="{{url_for('newItem',catalog_name=i.name)}}" >Add Item</a><br>
+
+
+{%endfor%}
+</div>
+	{% endblock %}

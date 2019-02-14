@@ -1,0 +1,59 @@
+body {
+    font-family: sans-serif;
+    background-color:#483D8B ;
+    box-sizing: border-box
+}
+h3{
+color:white
+}
+h1{
+color:#FFD700;
+border-bottom:1px solid white;
+margin-bottom:10px
+}
+h1,
+h3 {
+    font-family: 'georgia', serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffcc;
+    font-size: .75em;
+}
+
+a:hover{
+color:#ffffcc
+}
+a:visited{
+color:#ffffcc
+}
+
+.items{
+float:left
+}
+.log{
+float: right;
+margin-top:2px;
+margin-right:12px
+}
+p{
+color:white
+}
+button {
+background-color:#FFD700;
+padding:10px;
+border-radius:50%;
+
+}
+input,select,textarea{
+width:300px
+}
+
+input[type="submit"]{
+width:100px
+}
+a span{font-size:30px}
+
+

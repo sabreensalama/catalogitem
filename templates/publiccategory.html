@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="{{url_for('showLogin')}}"><button class='log'>Login</button></a>
+<h1>Categories</h1>
+{% for i in catalog %}
+
+<a href="{{url_for('showItems',catalog_name=i.name)}}" ><span>{{i.name}}<span></a><br>
+
+{%endfor%}
+</div>
+{% endblock %}

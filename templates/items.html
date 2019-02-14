@@ -1,0 +1,19 @@
+
+
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="items col md-6">
+
+<h1>{{cata.name}} Items</h1>
+
+{% for i in items %}
+<ul>
+<li><a href="{{url_for('showInfo',item_title=i.title,catalog_name=cata.name)}}">{{i.title}}</a></li>
+</ul>
+<br>
+{% endfor %}
+</div>
+</div>
+<div>
+{% endblock %}

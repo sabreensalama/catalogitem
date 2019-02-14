@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Edit Item</h1>
+<form method='post' action="{{url_for('editItem',item_title=i.title)}}">
+ <p>Title:</p>
+<input type='text' name='title' placeholder='{{i.title}}'>
+<p>Description:</p>
+<textarea name = 'description' rows='5' cols='40' placeholder = '{{i.description}}'></textarea>
+<p>Category:</p>
+<select name ="category">
+{% for g in catalog %}
+  <option value='g.name'>{{g.name}}</option>
+{% endfor %}
+</select><br><br>
+<input type="submit" value="submit">
+</form>
+{% endblock %}
